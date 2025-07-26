@@ -77,7 +77,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: #051129;
   z-index: 100;
 }
 
@@ -99,6 +99,7 @@ body {
   transition: 0.3s;
   opacity: 0;
   animation: slideRight 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
@@ -136,6 +137,8 @@ body {
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
 }
 .home-content h3 span {
     color: #0ef;
@@ -180,7 +183,7 @@ body {
     transition: 0.3s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var);
+    animation-delay: calc(.2s * var(--i));
 }
 .home-sci a:hover {
     background: #0ef;
@@ -197,12 +200,59 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
 
 }
 .btn-box:hover {
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan, 0 0 50px cyan, 
     0 0 100px cyan, 0 0 200px cyan
+}
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 80px 10%;
+}
+.about-img img {
+    /* padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius:8px ; */
+    
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ef, #c800ff);
+    border: 5px solid #081b29;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+
+}
+.about-text h2 {
+    font-size: 60px;
+}
+.about-text h2 span {
+    color: #0ef;
+}
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
 }
 
 @keyframes slideRight {
