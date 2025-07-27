@@ -87,18 +87,18 @@
             
         </div>
     </section>
-    <h1 class="sub-title">My <span>Skills</S></span></h1> 
-
-    <section>
-        <div class ="container1" id="Skills">
-            <h1 class="Heading1">Technical Skills</h1>
+     
+    <h1 class="sub-title">My <span>Skills</span></h1>
+    <section class="skills-container" id="skills">
+        <div class ="container1">
+            <h1 class="heading1">Technical Skills</h1>
             <div class="Technical-bars">
                 <div class="bar"><i style="color: #f89820;" class='bx bxl-java'></i>
                     <div class="info">
                         <span>Java</span>
                     </div>
                     <div class="progress-line java">
-                        <span></span>
+                        <span data-percentage="90%"></span>
                     </div>
                 </div>
                 <div class="bar"><i style="color: #c32ec9;" class='bx bxl-python'></i>
@@ -106,7 +106,7 @@
                         <span>Python</span>
                     </div>
                     <div class="progress-line python">
-                        <span></span>
+                        <span data-percentage="65%"></span>
                     </div>
                 </div>
                 <div class="bar"><i style="color: #02569B;" class='bx bxl-flutter'></i>
@@ -114,7 +114,7 @@
                         <span>Flutter</span>
                     </div>
                     <div class="progress-line flutter">
-                        <span></span>
+                        <span data-percentage="85%"></span>
                     </div>
                 </div>
                 <div class="bar"><i style="color: #c95d2e;" class='bx bxl-html5'></i>
@@ -122,7 +122,7 @@
                         <span>HTML</span>
                     </div>
                     <div class="progress-line html">
-                        <span></span>
+                        <span data-percentage="50%"></span>
                     </div>
                 </div>
                 <div class="bar"><i style="color: #147bbc;" class='bx bxl-css3'></i>
@@ -130,48 +130,96 @@
                         <span>CSS</span>
                     </div>
                     <div class="progress-line css">
-                        <span></span>
+                        <span data-percentage="75%"></span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container1">
+        <!-- <div class="container1">
             <h1 class="heading1">Professional Skills</h1>
             <div class="radial-bars">
-
-                <svg x="0px" viewBox="0 0 200 200">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
                     <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
                     <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                 </svg>
+                <div class="percentage">90%</div>
                 <div class="text">Creativity</div>
             </div>
             <div class="radial-bars">
-
-                <svg x="0px" viewBox="0 0 200 200">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
                     <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
                     <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                 </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Creativity</div>
+            </div>
+            <div class="radial-bars">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
                 <div class="text">Communication</div>
             </div>
             <div class="radial-bars">
-
-                <svg x="0px" viewBox="0 0 200 200">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
                     <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
                     <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                 </svg>
+                <div class="percentage">75%</div>
                 <div class="text">Problem Solving</div>
             </div>
             <div class="radial-bars">
-
-                <svg x="0px" viewBox="0 0 200 200">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
                     <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
                     <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                 </svg>
+                <div class="percentage">85%</div>
                 <div class="text">TeamWork</div>
             </div>
+        </div> -->
+
+        <div class="container1">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text-label">Creativity</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">65%</div>
+                    <div class="text-label">Communication</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text-label">Problem Solving</div>
+                </div>
+                <div class="radial-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text-label">TeamWork</div>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </section> 
+
     <script src="main.js"></script>
     
 </body>
