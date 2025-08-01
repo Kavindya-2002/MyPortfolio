@@ -32,6 +32,13 @@ body {
   opacity: 0;
   animation: slideTop .5s ease forwards;
 }
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 101;
+}
 
 .navbar a {
   color: #fff;
@@ -47,6 +54,43 @@ body {
 .navbar a:hover {
   color: #0ef;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #051129;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    padding: 0;
+  }
+
+  .navbar a {
+    margin: 15px 0;
+    font-size: 18px;
+    opacity: 1; /* Optional: always visible in dropdown */
+    animation: none;
+  }
+
+  .navbar.open {
+    max-height: 300px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 101;
+  }
+}
+
 
 .home {
   display: flex;
@@ -404,21 +448,19 @@ body {
     gap: 3rem;
     padding-left: 30px;
     margin-top: 130px;
+    
 }
 .contact-text h2 {
     font-size: 60px;
     line-height: 1;
     text-align: center;
+    margin-bottom: 30px;
 }
 .contact-text h2 span {
     color: #0ef;
+    
 }
-.contact-text h4 {
-    margin: 15px 0;
-    color: rgb(228,228,228);
-    font-size: 20px;
-    font-weight: 600;
-}
+
 .contact-text p {
     color: rgb(177, 177, 177);
     font-size: 20px;
@@ -534,6 +576,142 @@ body {
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 40px 5%;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-img img {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
+
+  .portfolio-content {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 40px 5%;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+  }
+
+  .about-title,
+  .sub-title,
+  .main-text h2,
+  .contact-text h2 {
+    font-size: 40px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3,
+  .about-text h4 {
+    font-size: 22px;
+  }
+
+  .home-content p,
+  .about-text p,
+  .services-list div p,
+  .contact-text p {
+    font-size: 16px;
+  }
+
+  .btn-box {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .read {
+    width: 100%;
+  }
+
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%;
+  }
+
+  .contact-form form .send {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .contact-icons {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 5%;
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+  }
+
+  .home-content h1 {
+    font-size: 26px;
+  }
+
+  .home-content h3 {
+    font-size: 18px;
+  }
+
+  .home-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .project-card img,
+  .project-card .overlay {
+    width: 100% !important;
+  }
+
+  .top {
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
 
 
