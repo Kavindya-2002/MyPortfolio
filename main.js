@@ -5,3 +5,26 @@ var typed= new Typed(".text", {
     backDelay: 1000,
     loop: true
 });
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+  
+    
+    var params = {
+        name: document.querySelector('input[placeholder="Enter Your Name"]').value,
+        email: document.querySelector('input[placeholder="Enter Your Email"]').value,
+        subject: document.querySelector('input[placeholder="Subject"]').value,
+        message: document.querySelector('textarea[placeholder="Enter Your Message"]').value
+    };
+
+  
+    
+    emailjs.send("service_st1a6sy", "template_t6g8by3", params)
+      .then(function(response) {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("Failed to send message. Please try again!");
+        console.error("Error:", error);
+      });
+  });

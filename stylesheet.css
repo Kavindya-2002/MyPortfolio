@@ -349,9 +349,8 @@ body {
 
 .project-card .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    inset: 0;
+    width: 300px;
     height: 100%;
     background: linear-gradient(to bottom, transparent, var(--main-color));
     display: flex;
@@ -362,6 +361,8 @@ body {
     padding: 0 2rem;
     transform: translateY(100%);
     transition: transform 0.5s ease;
+    border-radius: 1rem; 
+    overflow: hidden;
 }
 
 .project-card:hover .overlay {
@@ -387,7 +388,7 @@ body {
 }
 
 .overlay a:hover {
-    background: yellow;
+    background: rgb(43, 43, 189);
     transform: scale(1.1);
 }
 
@@ -505,14 +506,13 @@ body {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef;
+    box-shadow: 0 0 3px #0ef,
+                0 0 10px #0ef;
 }
 
 .contact-form form .send:hover {
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan, 
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 0 0 5px #0ef,
+                0 0 15px #0ef;
 }
 
 .last-text {
