@@ -54,6 +54,13 @@ body {
 .navbar a:hover {
   color: #0ef;
 }
+@media (max-width: 768px) {
+  .navbar.open {
+    max-height: 500px; /* or more */
+    overflow-y: auto;
+  }
+}
+
 
 @media (max-width: 768px) {
   .navbar {
@@ -191,6 +198,12 @@ body {
     box-shadow: 0 0 5px #0ef,
                 0 0 15px #0ef;
 }
+@media (max-width: 768px) {
+  .home {
+    padding-top: 120px;
+  }
+}
+
 .about {
   padding: 80px 10%;
 }
@@ -771,3 +784,4 @@ body {
         opacity: 1;
     }
 }
+
