@@ -35,4 +35,26 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         alert("Failed to send message. Please try again!");
         console.error("Error:", error);
       });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const topButton = document.querySelector('.top');
+  const footer = document.querySelector('.last-text');
+
+  topButton.style.display = 'none'; 
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const footerOffsetTop = footer.offsetTop;
+
+    
+    if (scrollY + windowHeight >= footerOffsetTop - 100) {
+      topButton.style.display = 'block';
+    } else {
+      topButton.style.display = 'none';
+    }
   });
+});
+
+
